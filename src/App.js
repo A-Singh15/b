@@ -19,14 +19,14 @@ function App() {
 
     function createHeart() {
         const heart = document.createElement("i");
-        heart.className = "fa-solid fa-heart";
+        heart.className = "fa-solid fa-book";
         heart.style.left = Math.random() * 100 + "vw";
         heart.style.animationDuration = Math.random() * 3 + 2 + "s";
         body.appendChild(heart);
     }
     setInterval(createHeart, 1000);
     setInterval(function name() {
-        var heartArr = document.querySelectorAll(".fa-heart");
+        var heartArr = document.querySelectorAll(".fa-book");
         if (heartArr.length > 200) {
             heartArr[0].remove();
         }
@@ -34,13 +34,13 @@ function App() {
 
     const popUp = () => {
         alert(
-            "AH look at you, you caught the button. \nLucky button catchers win one free date on February 14th with an eligible bachelor who will be in touch with you to follow up!"
+            "Great observation! This button is part of a study. Stay engaged for more details."
         );
     };
 
     const clickedYes = () => {
         alert(
-            "Looks like you couldn’t resist saying yes, Bianca! You’ve officially made my Valentine’s Day special. An message has been sent to me with your response, and I can't wait to celebrate with you but incase not received please text me 6505012799"
+            "Your response has been recorded. Thank you for participating in the writing and research session. If your response was not submitted, please contact me at 6505012799."
         );
     };
 
@@ -114,9 +114,9 @@ function App() {
                     {isMusicPlaying ? "Pause Music" : "Play Music"}
                 </button>
                 <img src={BiancaImage} alt="Bianca" className="Bianca-image" />
-                <p className="pre-valentine">From Aaron to Bianca </p>
+                <p className="research-session">Writing & Research Date</p>
             </div>
-            <p className="valentine">Valentine?</p>
+            <p className="study-question">Are you ready to participate?</p>
             <form onSubmit={sendEmail} ref={form}>
                 <button style={yesStyle} type="submit" onClick={clickedYes}>
                     YES!
